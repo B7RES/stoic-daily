@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import { useAppContext } from "./context/AppContext";
 import Header from "./components/Header";
 import quotes from "./data/quotes.json";
 import { Sparkles, Share2, X, Maximize2 } from "lucide-react";
@@ -8,7 +7,6 @@ import "./styles/app.scss";
 import type { Quote } from "./types";
 
 export default function App() {
-  const { theme } = useAppContext();
   const { i18n } = useTranslation();
   const translatedQuotes = i18n.t("quotes", { returnObjects: true }) as Array<{ id: number; text: string; author: string }>;
 
