@@ -5,17 +5,7 @@ import Header from "./components/Header";
 import quotes from "./data/quotes.json";
 import { Sparkles, Share2, X, Maximize2 } from "lucide-react";
 import "./styles/app.scss";
-
-interface Quote {
-  id: number;
-  book: number;
-  number: number;
-  author: string;
-  text: {
-    en: string;
-    it: string;
-  };
-}
+import type { Quote } from "./types";
 
 export default function App() {
   const { theme } = useAppContext();
