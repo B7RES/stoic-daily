@@ -1,0 +1,80 @@
+@import './variables';
+
+.zen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing-xlarge;
+
+    .zen-quote {
+        blockquote {
+            text-align: center;
+            font-family: 'Crimson Text', serif;
+            font-weight: 400;
+            font-style: italic;
+            max-width: $quote-max-width;
+            line-height: 1.6;
+            margin: 0;
+
+            font-size: 1.75rem;
+
+            @media (min-width: 640px) {
+                font-size: 2.25rem;
+            }
+
+            @media (min-width: 768px) {
+                font-size: 2.75rem;
+            }
+
+            @media (min-width: 1024px) {
+                font-size: 3.5rem;
+            }
+        }
+
+        .quote-meta {
+            text-align: center;
+            font-size: $font-size-small;
+            margin-top: $spacing-xlarge;
+
+            [data-theme="dark"] & {
+                color: #aaa;
+            }
+
+            [data-theme="light"] & {
+                color: #666;
+            }
+        }
+    }
+
+    .zen-close {
+        position: fixed;
+        bottom: $spacing-xlarge;
+        right: $spacing-xlarge;
+        background: none;
+        border: none;
+        color: inherit;
+        cursor: pointer;
+        font-size: 1.5rem;
+        padding: $spacing-medium;
+        transition: opacity 0.3s ease;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        [data-theme="dark"] & {
+            color: #0891b2;
+        }
+
+        [data-theme="light"] & {
+            color: #0891b2;
+        }
+    }
+}

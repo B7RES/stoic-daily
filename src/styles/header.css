@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] .header {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-toggle,
+.lang-toggle {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .theme-toggle,
+[data-theme="light"] .lang-toggle {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover,
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="light"] .theme-toggle:hover,
+[data-theme="light"] .lang-toggle:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

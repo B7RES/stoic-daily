@@ -1,0 +1,58 @@
+@import './variables';
+
+.button-group {
+    display: flex;
+    gap: $spacing-medium;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 0.75rem $spacing-large;
+    font-size: $font-size-small;
+    border: none;
+    border-radius: $border-radius-full;
+    cursor: pointer;
+    transition: $transition-default;
+    display: flex;
+    align-items: center;
+    gap: $spacing-small;
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+}
+
+.btn-primary {
+    background: $primary-color;
+    color: white;
+
+    &:hover:not(:disabled) {
+        background: $primary-hover;
+    }
+
+    &:active:not(:disabled) {
+        transform: scale(0.98);
+    }
+}
+
+.btn-secondary {
+    [data-theme="dark"] & {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    [data-theme="light"] & {
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    color: inherit;
+
+    &:hover:not(:disabled) {
+        opacity: 0.7;
+    }
+
+    &:active:not(:disabled) {
+        transform: scale(0.98);
+    }
+}

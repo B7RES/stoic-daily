@@ -1,0 +1,17 @@
+@import './variables';
+@import './buttons';
+@import './quote';
+@import './zen';
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    &.zen-mode {
+        padding: 2rem;
+    }
+}

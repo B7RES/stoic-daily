@@ -1,0 +1,57 @@
+@import './variables';
+
+.quote-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-medium;
+
+    blockquote {
+        text-align: center;
+        max-width: 56rem;
+        line-height: 1.6;
+        margin: 0;
+        font-style: italic;
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 1;
+        transform: translateY(0);
+
+        font-size: 1.5rem;
+        margin-bottom: $spacing-xlarge;
+
+        @media (min-width: 768px) {
+            font-size: 2.25rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        &.normal {}
+
+        &.zen {
+            font-size: $font-size-large;
+            margin-bottom: 0;
+        }
+    }
+
+    .quote-meta {
+        text-align: center;
+        font-size: $font-size-small;
+        margin-bottom: $spacing-3xl;
+        font-family: $font-family-sans;
+
+        [data-theme="dark"] & {
+            color: #aaa;
+        }
+
+        [data-theme="light"] & {
+            color: #666;
+        }
+    }
+}
